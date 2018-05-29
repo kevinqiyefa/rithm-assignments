@@ -4,16 +4,16 @@
 
 Simplify the following big O expressions as much as possible:
 
-1.  `O(n + 10)`
-2.  `O(100 * n)`
-3.  `O(25)`
-4.  `O(n^2 + n^3)`
-5.  `O(n + n + n + n)`
-6.  `O(1000 * log(n) + n)`
-7.  `O(1000 * n * log(n) + n)`
-8.  `O(2^n + n^2)`
-9.  `O(5 + 3 + 1)`
-10. `O(n + n^(1/2) + n^2 + n * log(n)^10)`
+1.  `O(n + 10)`  -> `O(n)`
+2.  `O(100 * n)` -> `O(n)`
+3.  `O(25)` -> `O(1)`
+4.  `O(n^2 + n^3)` -> `O(n^3)`
+5.  `O(n + n + n + n)` -> `O(n)`
+6.  `O(1000 * log(n) + n)` -> `O(n)`
+7.  `O(1000 * n * log(n) + n)` -> `O(nlogn)`
+8.  `O(2^n + n^2)` -> `O(2^n)`
+9.  `O(5 + 3 + 1)` -> `O(1)`
+10. `O(n + n^(1/2) + n^2 + n * log(n)^10)` -> `O(n^2)`
 
 ## Part 2
 
@@ -29,9 +29,9 @@ function logUpTo(n) {
 }
 ```
 
-Time Complexity:
+Time Complexity: `O(n)`
 
-Space Complexity:
+Space Complexity: `O(1)`
 
 2.  `logAtMost10`
 
@@ -43,9 +43,9 @@ function logAtMost10(n) {
 }
 ```
 
-Time Complexity:
+Time Complexity: `O(n)`
 
-Space Complexity:
+Space Complexity: `O(1)`
 
 3.  `logAtLeast10`
 
@@ -57,9 +57,9 @@ function logAtLeast10(n) {
 }
 ```
 
-Time Complexity:
+Time Complexity: `O(1)`
 
-Space Complexity:
+Space Complexity: `O(1)`
 
 4.  `onlyElementsAtEvenIndex`
 
@@ -75,9 +75,9 @@ function onlyElementsAtEvenIndex(array) {
 }
 ```
 
-Time Complexity:
+Time Complexity: `O(n)`
 
-Space Complexity:
+Space Complexity: `O(n)`
 
 5.  subtotals
 
@@ -95,14 +95,14 @@ function subtotals(array) {
 }
 ```
 
-Time Complexity:
+Time Complexity: `O(n^2)`
 
-Space Complexity:
+Space Complexity: `O(n)`
 
 ## Part 3
 
-1.  True or false: `n^2 + n` is `O(n^2)`.
-2.  True or false: `n^2 + n` is `O(n^3)`.
-3.  True or false: `n^2 + n` is `O(n)`.
-4.  What's the time complexity of the `.indexOf` array method?
-5.  What's the time complexity of the `.includes` array method?
+1.  True or false: `n^2 + n` is `O(n^2)`.  -> `True`
+2.  True or false: `n^2 + n` is `O(n^3)`. -> `True`
+3.  True or false: `n^2 + n` is `O(n)`. -> `False`
+4.  What's the time complexity of the `.indexOf` array method? -> `O(n)`
+5.  What's the time complexity of the `.includes` array method? -> `O(n)`
