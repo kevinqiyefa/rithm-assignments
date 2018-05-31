@@ -1,0 +1,120 @@
+/* Mock 1 */
+
+button {
+  position: relative;
+  left: 100px;
+  top: 100px;
+  background-color: rgb(2, 162, 255);
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  font-size: 1.1em;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  background-color: rgb(5, 109, 207);
+  cursor: pointer;
+}
+
+/* Mock 2 */
+#mock2 {
+  top: 220px;
+  position: relative;
+}
+
+.card {
+  top: 200px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 320px;
+  border-radius: 10px;
+  align-items: center;
+  margin: 0 auto;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+#card-banner {
+  background-image: url('http://www.smashingphotoz.com/wp-content/uploads/2012/11/11_cat_photos.jpg');
+  height: 200px;
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+hr {
+  margin: 0;
+}
+
+#card-header,
+#card-body {
+  padding: 20px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+/* Mock 3 */
+#mock3 {
+  top: 250px;
+  position: relative;
+}
+
+.mock3 {
+  top: 300px;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 5em;
+}
+
+.tile {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  border: 5px solid black;
+}
+
+.img1 {
+  background-image: url('https://mytebox.com/gif/Cute-cat-drinking-milk-gif.gif');
+}
+
+.img2 {
+  background-image: url('https://www.cat-gifs.com/w3/CAT-GIF-Very-cute-Cat-trying-to-gently-grab-a-cherry-Sweet-Kitty.gif');
+}
+.img3 {
+  background-image: url('https://amazinganimalphotos.com/wp-content/uploads/2014/10/Cute-Cat-Wiggles-Like-Shaquille-O-Neal.gif');
+}
+
+.img1,
+.img2,
+.img3 {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+}
+
+#hover-effect {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  color: white;
+  top: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  text-align: center;
+  transition: top 0.6s;
+}
+
+.tile:hover #hover-effect {
+  top: 0;
+}
