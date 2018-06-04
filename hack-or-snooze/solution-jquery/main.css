@@ -53,7 +53,12 @@ body {
 }
 
 #form {
-  margin: 2em 5em 3em 5em;
+  margin: 2em 5em 6em 4em;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .body-content {
