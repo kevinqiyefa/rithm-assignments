@@ -6,15 +6,15 @@
 
 2.  What is a URL?
 
-* URL stands for Uniform Resource Locator, and is used to specify addresses on the World Wide Web.
+* URL stands for Uniform Resource Locator, and is used to specify addresses on the World Wide Web; it's also the link of the site.
 
 3.  What is TCP?
 
-* The Transmission Control Protocol (TCP) is one of the main protocols of the Internet protocol suite. It means breaking up and putting/packing the data/file all together again. If the data is missing then it will make the request again.
+* The Transmission Control Protocol (TCP), a protocal that break up the data/file and send that to the client; when client receive all the data/file, then the protocal will try to put/pack all the data/file all together again. If the data is missing then it will make the request again.
 
 4.  What is IP?
 
-* The Internet Protocol (IP) is the protocol that governs how data is sent across a network from one computer to another.
+* The Internet Protocol (IP) is the protocol that governs how data is sent across a network from one computer to another, it's also a non-human readable url.
 
 5.  What is DNS?
 
