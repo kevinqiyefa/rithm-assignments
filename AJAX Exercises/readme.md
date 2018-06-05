@@ -1,5 +1,7 @@
 # Ajax Exercises
 
+[Click here to view the Demo](https://Giphy-Party--kevinqi2.repl.co)
+
 It's time to build something fun with your knowledge of jQuery and AJAX! For this exercise we will be using the Giphy API! This will require you to use an API key and understand some of the documentation about the API, which you can see here.
 
 Here is what the URL would look like for search term of "hilarious" - http://api.giphy.com/v1/gifs/search?q=hilarious&api_key=dc6zaTOxFJmzC. You can click on this URL and see the JSON you will get back. To view this in a nicer format, we highly recommend using the JSON Viewer chrome extension.
