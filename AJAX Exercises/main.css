@@ -1,0 +1,22 @@
+body {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+}
+
+.container {
+  color: white;
+  text-align: center;
+  margin-top: 5em;
+}
+
+.form-inline {
+  justify-content: center;
+  margin-top: 3em;
+}
+
+.imgBody {
+  margin-top: 5em;
+}
+.img {
+  margin: 10px;
+}
