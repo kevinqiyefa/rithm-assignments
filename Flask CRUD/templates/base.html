@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask CRUD</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+
+    <div class="container">
+        <h1 id="heading">A HEALTHY CRUNCH</h1>
+    <hr>
+        {% block content %}
+        {% endblock %}
+    <hr>
+
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2018 |  <b>Kevin Qi </b> All rights reserved</p>    
+        </div>
+    </footer>
+    
+</body>
+</html>

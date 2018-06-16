@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <h3 class="page-heading">Welcome to my snack crud page!</h3>
+
+  <div class="list-group snack-list">
+      {% for snack in snacks %}
+      <button type="button" class="list-group-item list-group-item-action">
+          <a href="{{ url_for('show_snack', id=snack.id) }}" id="url">
+              Snack Name: <strong>{{ snack.name }}</strong>  and  Snack Kind: <strong>{{ snack.kind }}</strong>
+            </a>
+      </button>
+      {% endfor %}
+
+  </div>
+ 
+
+  <form action="{{ url_for('new_snack') }}" class="add-snack swing">
+      <button type="submit" class="btn btn-primary btn-lg">Add Snack!</button>
+  </form>
+
+  
+{% endblock %}
