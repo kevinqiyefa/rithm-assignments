@@ -20,23 +20,35 @@ Please answer the following questions (you can write your answers directly in th
 
 5.  How do you connect to a database in psql?
 
-    - \c name_of_db
+    ```
+     \c name_of_db
+    ```
 
 6.  How do you show all of your databases in psql?
 
-    - \l
+    ```
+     \l
+    ```
 
 7.  How do you create a database in psql?
 
-    - CREATE DATABASE name_of_db;
+    ```
+     CREATE DATABASE name_of_db;
+    ```
 
 8.  How do you drop a database in psql?
 
-    - DROP DATABASE name_of_db;
+    ```
+     DROP DATABASE name_of_db;
+    ```
 
 9.  How do you create a database in the terminal?
 
-    - createdb name_of_db
+    ```
+     createdb name_of_db
+    ```
 
 10. How do you drop a database in the terminal?
-    - dropdb name_of_db
+    ```
+     dropdb name_of_db
+    ```
