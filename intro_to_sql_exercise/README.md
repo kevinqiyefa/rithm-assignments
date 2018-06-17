@@ -5,7 +5,13 @@
 Write the SQL commands necessary to do the following:
 
 1.  Create a database called `first_assignment`.
+    ```
+        createdb first_assignment
+    ```
 2.  Connect to that database.
+    ```
+        \c first_assignment
+    ```
 3.  Create a table called `products` with columns for:
 
     - `id`, which should be a unique auto-incremementing integer
@@ -13,20 +19,95 @@ Write the SQL commands necessary to do the following:
     - `price`, which should be numeric, and greater than zero
     - `can_be_returned`, which should be a boolean, and not nullable
 
+    ```
+        CREATE TABLE products (id SERIAL PRIMARY KEY,
+                    name TEXT NOT NULL,
+                    price NUMERIC CHECK (price > 0),
+                    can_be_returned BOOLEAN NOT NULL);
+    ```
+
 4.  Add a product to the table with the name of "chair", price of 44.00, and can_be_returned of false.
+
+    ```
+        INSERT INTO products(name, price, can_be_returned) VALUES ('chair', 44.00, FALSE);
+    ```
+
 5.  Add a product to the table with the name of "stool", price of 25.99, and can_be_returned of true.
+
+    ```
+        INSERT INTO products(name, price, can_be_returned) VALUES ('stool', 25.99, TRUE);
+    ```
+
 6.  Add a product to the table with the name of "table", price of 124.00, and can_be_returned of false.
+
+    ```
+        INSERT INTO products(name, price, can_be_returned) VALUES ('table', 124.00, FALSE);
+    ```
+
 7.  Display all of the rows and columns in the table.
+
+    ```
+        SELECT * FROM products;
+    ```
+
 8.  Display all of the names of the products.
+
+    ```
+        SELECT name FROM products;
+    ```
+
 9.  Display all of the names and prices of the products.
+
+    ```
+        SELECT name, price FROM products;
+    ```
+
 10. Add a new product - make up whatever you would like!
+
+    ```
+        INSERT INTO products(name, price, can_be_returned) VALUES ('hammock', 79.99, TRUE);
+    ```
+
 11. Display only the products that `can_be_returned`.
+
+    ```
+        SELECT * FROM products WHERE can_be_returned;
+    ```
+
 12. Display only the products that have a price less than 44.00.
+
+    ```
+        SELECT * FROM products WHERE price < 44.00;
+    ```
+
 13. Display only the products that have a price in between 22.50 and 99.99.
+
+    ```
+        SELECT * FROM products WHERE price BETWEEN 22.50 AND 99.99;
+    ```
+
 14. There's been a change in company policy, and now all tables are returnable. Update the database accordingly.
+
+    ```
+        UPDATE products SET can_be_returned = TRUE WHERE name = 'table';
+    ```
+
 15. There's a sale going on: Everything is $20 off! Update the database accordingly.
+
+    ```
+        UPDATE products SET price = price - 20;
+    ```
+
 16. Because of the sale, everything that costs less than $25 has sold out. Remove all products whose price meets this criteria.
+
+    ```
+        DELETE FROM products WHERE price < 25;
+    ```
+
 17. And now the sale is over. For the remaining products, increase their price by $20.
+    ```
+        UPDATE products SET price = price + 20;
+    ```
 
 ### Part 2 - Operators and Aggregates
 
