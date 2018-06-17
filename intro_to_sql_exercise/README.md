@@ -162,11 +162,41 @@ psql aggregates_exercise
 Write the following queries to perform the following:
 
 1.  Find the names of the top five most caloric snacks.
+
+    ```
+        SELECT name FROM snacks ORDER BY calories DESC LIMIT 5;
+    ```
+
 2.  Find the names of the 3 cheapest snacks.
+
+    ```
+        SELECT name FROM snacks ORDER BY price LIMIT 3;
+    ```
+
 3.  Calculate the total calories for all the snacks. Call this column `total_calories`.
+
+    ```
+        SELECT SUM(calories) AS total_calories FROM snacks;
+    ```
+
 4.  Calculate the average price for all the snacks. Call this column `average_price`.
+
+    ```
+        SELECT AVG(price) as average_price FROM snacks;
+    ```
+
 5.  Calculate the lowest price for all the snacks. Call this column `lowest_price`.
+
+    ```
+        SELECT MIN(price) as lowest_price FROM snacks;
+    ```
+
 6.  Calculate the highest price for all the snacks. Call this column `highest_price`.
+
+    ```
+        SELECT MAX(price) as highest_price FROM snacks;
+    ```
+
 7.  Find the count for each kind of candy in the table. Your output should look like this:
 
     ```sql
@@ -183,7 +213,11 @@ Write the following queries to perform the following:
     */
     ```
 
-8.  Find the count of each kind of candy where the count is greater than one. Your output should look like this:
+    ```sql
+        SELECT kind, COUNT(*) FROM snacks GROUP BY kind;
+    ```
+
+8)  Find the count of each kind of candy where the count is greater than one. Your output should look like this:
 
     ```sql
     /*
@@ -195,6 +229,10 @@ Write the following queries to perform the following:
     candy bar   |     5
     fruit snack |     2
     */
+    ```
+
+    ```sql
+    SELECT kind, COUNT() FROM snacks GROUP BY kind HAVING COUNT(*) > 1;
     ```
 
 9.  Find the average number of calories for each kind of candy and call the name of your column that contains the average `average_calories`. Order your output by the kind of candy in ascending order. Your output should look like this.
@@ -211,6 +249,14 @@ Write the following queries to perform the following:
     fruit snack |              320
     yogurt      |              260
     */
+    ```
+
+    ```sql
+        SELECT kind, ROUND(AVG(calories))
+            AS average_calories
+            FROM snacks
+            GROUP BY kind
+            ORDER BY kind;
     ```
 
 ### Part 3 - Codewars
