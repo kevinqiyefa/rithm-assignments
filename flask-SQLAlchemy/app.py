@@ -30,7 +30,7 @@ class Snack(db.Model):
         self.kind = kind
 
 
-# db.create_all()
+db.create_all()
 
 
 @app.route("/")
