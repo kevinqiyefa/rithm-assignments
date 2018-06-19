@@ -1,0 +1,129 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: yellow;
+  text-align: center;
+}
+
+#heading {
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.footer {
+  padding: 1em;
+}
+
+.page-heading {
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+}
+
+.snack-list {
+  margin: 3em 5em;
+}
+
+#url {
+  text-decoration: none;
+}
+
+.list-group-item #url:hover {
+  color: black;
+}
+.add-snack {
+  margin-bottom: 3em;
+}
+
+.snack-detail {
+  margin: 3em;
+  font-size: 1.2em;
+}
+
+@-webkit-keyframes swing {
+  15% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  30% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  65% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  80% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes swing {
+  15% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  30% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  65% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  80% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.swing:hover {
+  -webkit-animation: swing 1s ease;
+  animation: swing 1s ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+.button {
+  color: #f5f5f5;
+  font-weight: 600;
+}
+
+.button:hover {
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.create-form {
+  margin: 3em auto 8em auto;
+  max-width: 600px;
+}
+
+.col-form-label {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.delete-form {
+  padding-bottom: 2em;
+}
+
+.card {
+  padding: 5em;
+}

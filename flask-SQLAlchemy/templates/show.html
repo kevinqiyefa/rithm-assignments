@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h3 class="page-heading">Welcome! You are in the show snack page</h3>
+    <h4>Let's see some more information about this snack!</h4>
+
+    <div class="snack-detail">
+      <p>
+          The name of the snack is <strong>{{ snack.name }}</strong>
+      </p>
+      <p>
+          The kind of the snack is <strong>{{ snack.kind }}</strong>
+      </p>
+    </div>
+
+    <div>
+      <button class="btn btn-primary" type="button">
+        <a href="{{url_for('get_or_post_snacks')}}" class="button">See all the snacks</a>
+      </button>
+      <button class="btn btn-primary" type="button">
+        <a href="{{url_for('edit_snack', id=snack.id)}}" class="button">Edit this snack</a>
+      </button>
+    </div>
+  
+{% endblock %}
+
