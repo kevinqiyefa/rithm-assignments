@@ -218,3 +218,8 @@ def delete_tag(tag_id):
     db.session.commit()
 
     return redirect(url_for('tag_index'))
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
