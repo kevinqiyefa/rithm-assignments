@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h3 class="page-heading">Edit Message</h3>
+
+    <form action="{{ url_for('update_msg',message_id=message.id) }}?_method=PATCH" method="POST">
+
+        <div class="form-group">
+          <label for="comment">Message Content:</label>
+          <textarea class="form-control" rows="4" id="comment" name="content" required>{{message.msg}}</textarea>
+        </div>
+
+        <div>
+            {% for tag in tags %}
+                <div class="custom-control custom-checkbox mx-5">
+                    <input type="checkbox" class="custom-control-input" id="tag_id_{{tag.id}}" value="{{ tag.id }}" name="tags"  
+                    {% if tag in message.tags %}
+                        checked
+                    {% endif %}>
+                    <label class="custom-control-label badge badge-pill badge-warning my-1" for="tag_id_{{tag.id}}">{{ tag.name }}</label>
+                </div>
+            {% endfor %}
+        </div>
+
+        <button type="submit" class="btn btn-success float-right ml-2">Edit</button>
+        <a href="{{ url_for('show_msg', message_id=message.id) }}"><input type="button" value="Go Back" class="btn btn-secondary float-right"></a>
+    </form>
+    
+
+
+{% endblock %}

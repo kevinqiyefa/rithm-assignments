@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h3>Tag info:</h3>
+
+
+
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <h3 class="badge badge-pill badge-warning" id="tags">{{ tag.name }}</h3>
+            <a class="btn btn-primary ml-auto" href="{{ url_for('tag_index') }}">Go back</a>
+            <form class="ml-2" action="{{url_for('delete_tag', tag_id=tag.id)}}?_method=DELETE" method="POST">
+                <input type="submit" class="btn btn-danger" value="Delete">
+            </form>
+
+            <a href="{{ url_for('edit_tag', tag_id=tag.id) }}" class="btn btn-success ml-2">Edit Tag</a>
+        </li>
+
+    </ul>
+
+
+
+    <h3 class="mt-5 mb-4">Messages with this tag:</h3>
+
+    <ul id="listMsg">
+        {% for message in tag.message_tag %}
+         <div class="my-2">
+          <a href="{{url_for('show_msg', message_id=message.id)}}" id="list_msg_tag_link">
+            <span class="badge badge-pill badge-info ml-3 mr-5">
+                <li><h5 class="my-1">{{message.msg }}</h5></li>
+            </span>
+            &emsp;-- by {{message.user.first_name}}
+          </a>
+        </div>
+          
+        {% endfor %}
+        
+    </ul>
+    
+
+
+{% endblock %}
