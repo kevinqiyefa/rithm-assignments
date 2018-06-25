@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <h1 class="text-center display-5">Welcome to My Flask SQLAlchemy Application!</h1>
+  <hr class="my-4">
+
+  <div class="list-group mt-5">
+
+    
+      {% for user in users %}   
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <a href="{{ url_for('show_user', id=user.id) }}" id="user-name">
+                <strong>{{ user.first_name.upper() }}</strong>  <strong>{{ user.last_name.upper() }}</strong>
+            </a>
+            {% if user.messages.count() > 0 %}
+            <a class="mx-auto" href="{{ url_for('msg_index', id=user.id) }}"><span class="badge badge-info badge-pill">{{ user.messages.count() }}</span></a>
+            {% endif %}
+            <a href="{{ url_for('show_user', id=user.id) }}" class="text-right btn btn-success ml-auto">View Info</a>
+            <a href="{{ url_for('msg_index', id=user.id) }}" class="text-right btn btn-info ml-2">View Message</a>
+        </li>
+       
+      {% endfor %}
+
+  
+
+  </div>
+ 
+  
+{% endblock %}

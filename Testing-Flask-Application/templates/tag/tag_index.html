@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<h1>Here's all the tags </h1>
+
+
+<ul class="list-group">
+    {% for tag in tags %}
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        <h5 class="badge badge-pill badge-warning my-2" id="tags">{{ tag.name }}</h5>
+        <a href="{{ url_for('show_tag', tag_id=tag.id) }}" class="btn btn-primary ml-auto">Show</a>
+
+        <a href="{{ url_for('edit_tag', tag_id=tag.id) }}" class="btn btn-success ml-2">Edit</a>
+        <form class="ml-2" action="{{url_for('delete_tag', tag_id=tag.id)}}?_method=DELETE" method="POST">
+            <input type="submit" class="btn btn-danger" value="Delete">
+        </form>
+    </li>
+
+    {% endfor %}
+</ul>
+
+
+  
+{% endblock %}

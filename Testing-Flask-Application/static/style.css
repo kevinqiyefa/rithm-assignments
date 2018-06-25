@@ -1,0 +1,42 @@
+body {
+  min-width: 500px;
+}
+
+.delete-btn,
+.add-msg-btn {
+  display: inline;
+}
+
+#user-name,
+#tags {
+  text-decoration: none;
+  font-size: 1.3em;
+}
+
+.list-group-item:first-child {
+  border-top: solid;
+}
+
+table {
+  width: 100%;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+
+th {
+  border-top: none !important;
+}
+
+#listMsg {
+  list-style-type: none;
+}
+
+a,
+#list_msg_tag_link {
+  text-decoration: none;
+}

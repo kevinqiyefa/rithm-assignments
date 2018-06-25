@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="card mb-3 mx-5 userinfo">
+    <h3 class="card-header">Hello, {{ user.first_name }}</h3>
+    <div class="card-body">
+      <h5 class="card-title">You have 
+        {% if user.messages.count() > 0 %}
+
+          <a href="{{ url_for('msg_index', id=user.id) }}">
+            <span class="badge badge-info badge-pill">
+              {{ user.messages.count() }}
+            </span>
+          </a>
+        
+          
+          {% if user.messages.count() > 1 %}
+            messages
+          {% else %}
+           message
+          {% endif %}
+          
+        {% else %}
+          no message
+        {% endif %}
+
+      </h5>
+      
+    </div>
+    <img style="width: 100%; display: block;" src="{{ user.profile_link }}" alt="Photo">
+
+    <h2 class="card-header text-center py-5">About Me</h2>
+    <div class="card-body text-center mt-5">
+      <h5 class="card-text">
+          Your first name is <strong class="font-weight-bold">{{ user.first_name }}</strong>
+      </h5>
+      
+      <h5 class="card-text">
+          Your last name is <strong class="font-weight-bold">{{ user.last_name }}</strong> 
+      </h5>
+    </div>
+
+    <div class="card-body text-center my-3">
+  
+      
+            <a href="{{url_for('edit_user', id=user.id)}}" class="btn btn-warning">Edit User</a>
+          
+            <a href="{{url_for('msg_index', id=user.id)}}" class="btn btn-primary">View Message</a>
+    
+  
+    </div>
+    
+  </div>
+
+  
+{% endblock %}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask SQLAlchemy Part2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container py-3">
+                <a class="navbar-brand" href="{{ url_for('get_users') }}"><h1>Users</h1></a>
+                <a class="navbar-brand ml-4" href="{{ url_for('tag_index') }}">Tags</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">         
+                            <a class="btn btn-secondary mr-2" href="{{ url_for('new_tag') }}">Add Tag</a>
+                            <a class="btn btn-success btn-lg" href="{{ url_for('new_user') }}">Add User</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+              </nav>
+
+
+    <div class="container my-5 py-5">
+        <div class="jumbotron px-5">
+         
+                {% block content %}
+                {% endblock %}
+
+        </div>
+
+        <div class="mt-5 text-center">
+            <h5>&copy; 2018 |  <b>Kevin Qi </b> All rights reserved</h5>
+        </div>
+    </div>
+    
+
+    
+</body>
+</html>

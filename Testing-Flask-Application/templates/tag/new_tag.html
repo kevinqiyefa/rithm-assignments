@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h3 class="mb-5">Add a New Tag:</h3>
+
+    <form action="{{ url_for('add_tag') }}" method="POST">
+
+        <div class="form-group row">
+          <label for="tag_name" class="col-sm-2 col-form-label">Tag Name: </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="tag_name" placeholder="Enter your tag name" name="tagname" required>
+          </div>
+        </div>
+
+      
+        <button type="submit" class="btn btn-primary float-right ml-2">Add Tag</button>
+        <a href="{{ url_for('tag_index') }}"><input type="button" value="Go Back" class="btn btn-secondary float-right"></a>
+    </form>
+    
+
+
+{% endblock %}
