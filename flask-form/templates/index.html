@@ -9,7 +9,7 @@
   <div class="card">
       
       <img src="{{ pet.photo_url }}" alt="photo" width="300" height="280">
-      <h5 class="text-center mt-2"><a href="{{ url_for('edit', id=pet.id) }}">{{ pet.name }}</a>
+      <h5 class="mt-2"><a href="{{ url_for('edit', id=pet.id) }}">{{ pet.name }}</a>
       <span class="available">
         {% if pet.available %}
           is available
@@ -24,7 +24,7 @@
   {% for realpet in real_pet %}
     <div class="card">
         <img src="{{ realpet.pet_pic }}" alt="photo" width="300" height="280">
-        <h5 class="text-center mt-2">{{ realpet.pet_name }}
+        <h5 class="mt-2">{{ realpet.pet_name }}
           <span class="available">is available</span>
         </h5>
     </div>
