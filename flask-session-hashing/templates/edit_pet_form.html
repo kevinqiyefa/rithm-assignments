@@ -1,0 +1,45 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="editform">
+  <div class="petinfo mb-5">
+    <div class="card">
+      <h1>{{ pet.name }}</h1>
+
+      {% if pet.photo_url %}
+        <img src="{{ pet.photo_url }}" alt="photo" width="400"> 
+      {% endif %}
+
+      <div class="infoText">
+        {% if pet.species %}
+          <h3>Species: {{ pet.species }}</h3> 
+        {% endif %}
+
+        {% if pet.age %}
+          <h3>I am {{ pet.age }}
+              {% if pet.age > 1 %}
+                years
+              {% else %}
+                year
+              {% endif %}
+              old
+          </h3> 
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+
+
+    <form action="{{url_for('edit', id=pet.id)}}" method="POST">
+      
+      {% include "_form.html" %}
+      
+      <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+      
+      </form>
+
+</div>
+
+  {% endblock %}

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="">
+  <h1 class="text-left mt-5 ml-5">Pets</h1>
+
+  <div class="row">
+      
+  
+  {% for pet in pets %}
+  
+  <div class="col-lg-4 col-md-6 text-center">
+          <div class="card">
+      
+              <img src="{{ pet.photo_url }}" alt="photo" width="300" height="280">
+              <div>
+                
+                <h5 class="text-center mt-2">
+                    {% if session.get('password') %}
+                    <a href="{{ url_for('edit', id=pet.id) }}">{{ pet.name }}</a>
+                    {% else %} 
+                      {{ pet.name }}
+                    {% endif %}
+        
+              <span class="available">
+                {% if pet.available %}
+                  is available
+                {% else %}
+                  is not available
+                {% endif %}
+              </span>
+            </h5>
+            
+              </div>
+          </div>
+        </div>
+  {% endfor %}
+
+</div>
+
+<div class="row">
+
+  {% for realpet in real_pet %}
+
+  <div class="col-lg-4 col-md-6 text-center">
+    <div class="card">
+        <img src="{{ realpet.pet_pic }}" alt="photo" width="300" height="280">
+        <div>
+        <h5 class="text-center mt-2">{{ realpet.pet_name }}
+          <span class="available">is available</span>
+        </h5>
+        </div>
+    </div>
+  </div>
+  {% endfor %}
+  </div>
+</div>
+ 
+</div>
+
+
+  
+  
+{% endblock %}

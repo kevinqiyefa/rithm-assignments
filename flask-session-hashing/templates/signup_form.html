@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+<form action="{{ url_for('signup') }}" method="POST">
+
+
+      <div class="signup-form">
+          <h1>Sign Up</h1>
+        
+        {% include "_form.html" %}
+      
+        
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+
+      </div>
+  
+  </form>
+
+
+  {% endblock %}
