@@ -1,0 +1,15 @@
+{
+  "name": "node-js-assignment",
+  "version": "1.0.0",
+  "description": "For this exercise, we are going to build a simple Node.js script which allows us to make a request to an API and store the data in a text file!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
