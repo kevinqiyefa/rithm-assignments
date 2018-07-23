@@ -1,0 +1,40 @@
+.NewTodoForm {
+  margin-bottom: 3em;
+}
+.add-task {
+  display: inline-block;
+  background-color: #1984c3;
+  color: #fff;
+  font-family: Courier, sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0.5em;
+  border-bottom: 0.25em solid #0f5177;
+  -moz-transition: 0.1s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  box-shadow: 0 2px 3px #ccc;
+  position: relative;
+  cursor: pointer;
+  margin: 0 0 0 1em;
+}
+
+.add-task:hover {
+  background-color: #1e9feb;
+  border-bottom-width: 0;
+  margin-top: 0.2em;
+}
+
+.add-task-input {
+  font-size: 1.5em;
+}
+
+.add-task-text {
+  font-size: 2em;
+  margin-right: 0.5em;
+}
+
+.input-form {
+  display: inline-flex;
+}

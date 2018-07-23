@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+  font-size: 1.3em;
+  margin-top: 5em;
+}
+
+.animate {
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+}
+
+.action-button {
+  position: relative;
+  padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  border-radius: 10px;
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.blue {
+  font-size: 2em;
+  margin-top: 3em;
+  background-color: #3498db;
+  border-bottom: 5px solid #2980b9;
+  text-shadow: 0px -2px #2980b9;
+}
+
+ul {
+  margin-top: 5em;
+}

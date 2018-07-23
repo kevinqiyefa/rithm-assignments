@@ -1,0 +1,35 @@
+.App {
+  margin: 3em 5em;
+  padding: 3em 5em 1em 4em;
+  background-color: whitesmoke;
+}
+
+.App-Button {
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+.refresh {
+  display: inline-block;
+  background-color: #1984c3;
+  color: #fff;
+  font-size: 1.5em;
+  font-family: Courier, sans-serif;
+  padding: 1em 3em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0.5em;
+  border-bottom: 0.25em solid #0f5177;
+  -moz-transition: 0.1s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  box-shadow: 0 2px 3px #ccc;
+  position: relative;
+  cursor: pointer;
+}
+
+.refresh:hover {
+  background-color: #1e9feb;
+  border-bottom-width: 0;
+  margin-top: 0.2em;
+}
