@@ -14,7 +14,15 @@ class App extends Component {
 
     this.setState({
       images: cards,
-      showimages: [...this.state.showimages, randomimage]
+      showimages: [
+        ...this.state.showimages,
+        {
+          card: randomimage,
+          angle: Math.random() * 90 - 45,
+          randomX: Math.random() * 40 - 20,
+          randomY: Math.random() * 40 - 20
+        }
+      ]
     });
   };
   async componentDidMount() {
@@ -35,7 +43,7 @@ class App extends Component {
   }
   render() {
     const cards = this.state.showimages.map((i, idx) => (
-      <Card key={idx} src={i} />
+      <Card key={idx} src={i.card} ang={i.angle} x={i.randomX} y={i.randomY} />
     ));
     return (
       <div className="App">

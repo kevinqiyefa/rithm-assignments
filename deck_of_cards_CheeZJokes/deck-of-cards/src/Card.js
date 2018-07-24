@@ -4,6 +4,9 @@ import './Card.css';
 
 class Card extends Component {
   render() {
+    let angle = this.props.ang;
+    let randomX = this.props.x;
+    let randomY = this.props.y;
     return (
       <div className="App">
         <li>
@@ -11,10 +14,7 @@ class Card extends Component {
             src={this.props.src}
             alt=""
             style={{
-              transform: `translate(${Math.random() * 90 -
-                45}px, ${Math.random() * 40 - 20}px) rotate(${Math.random() *
-                40 -
-                20}deg)`
+              transform: `translate(${randomX}px, ${randomY}px) rotate(${angle}deg)`
             }}
           />
         </li>
