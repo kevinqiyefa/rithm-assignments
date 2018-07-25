@@ -1,0 +1,100 @@
+.App {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg {
+  width: 100%;
+  height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.greeting {
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 32%;
+  width: 30vh;
+  left: 10%;
+  color: white;
+}
+
+.Nav {
+  position: absolute;
+  left: 65%;
+  top: 30%;
+  padding: 1em;
+  width: 35vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1.5em;
+  list-style-type: none;
+}
+
+li > a {
+  color: white;
+  text-decoration: none;
+}
+
+li > a:hover {
+  text-decoration: underline;
+}
+
+li {
+  margin: 0.5em 0;
+}
+
+h1 > a {
+  color: black;
+}
+
+.soda-content {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1em;
+}
+
+.soda {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.soda-img {
+  width: 25%;
+  margin: 5em;
+  animation: soda-spin infinite 1s linear;
+}
+
+.Sarchines-content {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1em 2em;
+  color: white;
+}
+
+.sardine-btn > a {
+  color: white;
+}
+.sardine-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes soda-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

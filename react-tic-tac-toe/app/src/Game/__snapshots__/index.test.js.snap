@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> matches snapshot 1`] = `
+<div
+  id="board"
+>
+  <Board
+    board={
+      Array [
+        Array [
+          null,
+          null,
+          null,
+        ],
+        Array [
+          null,
+          null,
+          null,
+        ],
+        Array [
+          null,
+          null,
+          null,
+        ],
+      ]
+    }
+    frozen={false}
+    takeTurn={[Function]}
+  />
+</div>
+`;

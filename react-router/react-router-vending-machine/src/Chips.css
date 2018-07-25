@@ -1,0 +1,40 @@
+.Chips {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1em 5em;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #1984c3;
+  color: #fff;
+  font-family: Courier, sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0.5em;
+  border-bottom: 0.25em solid #0f5177;
+  -moz-transition: 0.1s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  box-shadow: 0 2px 3px #ccc;
+  position: relative;
+  cursor: pointer;
+  margin: 0 0 0 1em;
+  padding: 0.5em 1em;
+}
+.btn:hover {
+  background-color: #1e9feb;
+  border-bottom-width: 0;
+  margin-top: 0.2em;
+}
+
+.bag {
+  z-index: -1;
+  position: absolute;
+  width: 200px;
+}

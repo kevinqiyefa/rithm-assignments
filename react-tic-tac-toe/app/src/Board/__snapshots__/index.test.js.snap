@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> matches snapshot 1`] = `
+Array [
+  Array [
+    <Square
+      handleClick={[Function]}
+      id="sq00"
+      key="0|0"
+      val={null}
+/>,
+    <Square
+      handleClick={[Function]}
+      id="sq01"
+      key="0|1"
+      val={null}
+/>,
+    <Square
+      handleClick={[Function]}
+      id="sq02"
+      key="0|2"
+      val={null}
+/>,
+  ],
+  Array [
+    <Square
+      handleClick={[Function]}
+      id="sq10"
+      key="1|0"
+      val={null}
+/>,
+    <Square
+      handleClick={[Function]}
+      id="sq11"
+      key="1|1"
+      val={null}
+/>,
+    <Square
+      handleClick={[Function]}
+      id="sq12"
+      key="1|2"
+      val={null}
+/>,
+  ],
+  Array [
+    <Square
+      handleClick={[Function]}
+      id="sq20"
+      key="2|0"
+      val={null}
+/>,
+    <Square
+      handleClick={[Function]}
+      id="sq21"
+      key="2|1"
+      val={null}
+/>,
+    <Square
+      handleClick={[Function]}
+      id="sq22"
+      key="2|2"
+      val={null}
+/>,
+  ],
+]
+`;
