@@ -1,0 +1,54 @@
+.App {
+  text-align: center;
+  padding: 1em 0;
+  margin-bottom: 1em;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid purple;
+}
+
+.list {
+  display: inline-block;
+  margin: 0 2em;
+}
+
+.dog-name {
+  margin: 2em;
+  font-size: 1.5em;
+}
+.list-of-dog {
+  margin: 2em;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

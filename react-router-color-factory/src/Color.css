@@ -1,0 +1,15 @@
+.Color {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  font-size: 2em;
+}
+.color-content {
+  color: white;
+  margin-bottom: 3em;
+}

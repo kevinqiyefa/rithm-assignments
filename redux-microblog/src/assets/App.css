@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+ul,
+li,
+h2,
+h3,
+h1,
+h4 {
+  word-wrap: break-word;
+  max-width: 100%;
+}

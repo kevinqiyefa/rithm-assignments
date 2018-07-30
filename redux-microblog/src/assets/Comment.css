@@ -1,0 +1,10 @@
+.comment {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 1em;
+  margin-bottom: 0.5em;
+}
+
+.comments {
+  width: 95%;
+}
