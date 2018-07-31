@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { addComment } from '../actionCreator';
 
 class NewCommentForm extends Component {
   state = { comment: '' };
@@ -7,11 +8,7 @@ class NewCommentForm extends Component {
   handleSubmit = evt => {
     evt.preventDefault();
 
-    this.props.dispatch({
-      type: 'Add_COMMENTS',
-      postID: this.props.id,
-      comment: this.state.comment
-    });
+    this.props.addComment(this.state.comment, this.props.id);
     this.setState({ comment: '' });
   };
 
@@ -40,4 +37,7 @@ class NewCommentForm extends Component {
   }
 }
 
-export default connect()(NewCommentForm);
+export default connect(
+  null,
+  { addComment }
+)(NewCommentForm);

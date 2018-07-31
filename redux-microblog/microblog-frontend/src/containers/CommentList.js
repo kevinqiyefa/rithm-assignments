@@ -4,35 +4,31 @@ import Comment from '../components/Comment';
 import { connect } from 'react-redux';
 import NewCommentForm from './NewCommentForm';
 import EditableComment from '../components/EditableComment';
+import {
+  handleEditingCommentToggle,
+  updateComment,
+  deleteComment
+} from '../actionCreator';
 
 class CommentList extends Component {
   handleToggleEditComment = (pID, cID) => {
-    this.props.dispatch({
-      type: 'TOGGLE_EDITING_COMMENT',
-      postID: pID,
-      commentID: cID
-    });
+    this.props.handleEditingCommentToggle(pID, cID);
   };
 
   handleUpdateComment = (postID, commentID, updateComment) => {
-    this.props.dispatch({
-      type: 'UPDATE_COMMENT',
-      postID,
-      commentID,
-      updateComment
-    });
+    this.props.updateComment(postID, commentID, updateComment);
   };
 
   handleDeleteComment = (postID, commentID) => {
-    this.props.dispatch({ type: 'DELETE_COMMENT', postID, commentID });
+    this.props.deleteComment(postID, commentID);
   };
 
   render() {
-    const { id, comments, isCommenting } = this.props.post;
+    const { id, comments, is_commenting } = this.props.post;
 
     const cms = comments.map(
       c =>
-        !c.isEditingComment ? (
+        !c.is_editing_comment ? (
           <Comment
             comment={c.comment}
             key={uuid()}
@@ -51,11 +47,14 @@ class CommentList extends Component {
     );
     return (
       <div>
-        {isCommenting ? <NewCommentForm id={id} /> : ''}
+        {is_commenting ? <NewCommentForm id={id} /> : ''}
         <ul className="container mt-5 ml-3 comments">{cms}</ul>
       </div>
     );
   }
 }
 
-export default connect()(CommentList);
+export default connect(
+  null,
+  { handleEditingCommentToggle, updateComment, deleteComment }
+)(CommentList);

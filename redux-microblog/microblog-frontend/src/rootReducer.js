@@ -1,11 +1,14 @@
-import uuid from 'uuid/v1';
-
 const INITIAL_STATE = {
   posts: []
 };
 
 export default function rootReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
+    case 'FETCH_POSTS':
+      return {
+        posts: action.posts.sort((a, b) => b.upvote - a.upvote)
+      };
+
     case 'ADD_POST':
       return {
         posts: [
@@ -13,9 +16,9 @@ export default function rootReducer(state = INITIAL_STATE, action) {
           {
             title: action.title,
             body: action.body,
-            id: uuid(),
-            isEditing: false,
-            isCommenting: false,
+            id: action.id,
+            is_editing: false,
+            is_commenting: false,
             upvote: 0,
             downvote: 0,
             comments: []
@@ -29,7 +32,7 @@ export default function rootReducer(state = INITIAL_STATE, action) {
           if (action.id === post.id) {
             post.title = action.title;
             post.body = action.body;
-            post.isEditing = false;
+            post.is_editing = false;
           }
           return post;
         })
@@ -61,7 +64,7 @@ export default function rootReducer(state = INITIAL_STATE, action) {
       return {
         posts: state.posts.map(post => {
           if (action.id === post.id) {
-            post.isEditing = !post.isEditing;
+            post.is_editing = !post.is_editing;
           }
           return post;
         })
@@ -76,19 +79,23 @@ export default function rootReducer(state = INITIAL_STATE, action) {
       return {
         posts: state.posts.map(post => {
           if (action.id === post.id) {
-            post.isCommenting = !post.isCommenting;
+            post.is_commenting = !post.is_commenting;
           }
           return post;
         })
       };
 
-    case 'Add_COMMENTS':
+    case 'ADD_COMMENT':
       return {
         posts: state.posts.map(post => {
           if (action.postID === post.id) {
             post.comments = [
               ...post.comments,
-              { comment: action.comment, id: uuid(), isEditingComment: false }
+              {
+                comment: action.comment,
+                id: action.id,
+                is_editing_comment: false
+              }
             ];
           }
           return post;
@@ -101,7 +108,7 @@ export default function rootReducer(state = INITIAL_STATE, action) {
           if (action.postID === post.id) {
             post.comments.map(c => {
               if (action.commentID === c.id) {
-                c.isEditingComment = !c.isEditingComment;
+                c.is_editing_comment = !c.is_editing_comment;
               }
               return c;
             });
@@ -114,10 +121,10 @@ export default function rootReducer(state = INITIAL_STATE, action) {
       return {
         posts: state.posts.map(post => {
           if (action.postID === post.id) {
-            post.isCommenting = false;
+            post.is_commenting = false;
             post.comments.map(c => {
               if (action.commentID === c.id) {
-                c.isEditingComment = false;
+                c.is_editing_comment = false;
                 c.comment = action.updateComment;
               }
               return c;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import '../assets/NewPostForm.css';
+import { addPost } from '../actionCreator';
 
 class NewPostForm extends Component {
   state = { title: '', body: '', newpost: false };
@@ -9,11 +10,7 @@ class NewPostForm extends Component {
     evt.preventDefault();
     // check if valid
     if (this.state.title && this.state.body) {
-      this.props.dispatch({
-        type: 'ADD_POST',
-        title: this.state.title,
-        body: this.state.body
-      });
+      this.props.addPost(this.state.title, this.state.body);
       this.setState({ title: '', body: '' });
     }
   };
@@ -77,4 +74,7 @@ class NewPostForm extends Component {
   }
 }
 
-export default connect()(NewPostForm);
+export default connect(
+  null,
+  { addPost }
+)(NewPostForm);

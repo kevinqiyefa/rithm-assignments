@@ -34,7 +34,7 @@ Your boss is thrilled with the list of titles, but now there's just one more thi
 - Add functionality to edit posts
 - Add functionality to comment on posts
 - Allow users to add comments
-- Allow users to remove comments
+- Allow users to edit comments
 - Allow users to delete comments
 - Allow users to upvote posts
 - Allow users to downvote posts

@@ -3,10 +3,11 @@ import Title from '../components/Title';
 import uuid from 'uuid/v1';
 import { connect } from 'react-redux';
 import '../assets/TitleList.css';
+import { deletePost } from '../actionCreator';
 
 class TitleList extends Component {
   handleDelete = id => {
-    this.props.dispatch({ type: 'DELETE_POST', id });
+    this.props.deletePost(id);
   };
   render() {
     const titles = this.props.posts.map(post => (
@@ -35,4 +36,7 @@ function mapStateToProps(state) {
   return { posts: state.posts };
 }
 
-export default connect(mapStateToProps)(TitleList);
+export default connect(
+  mapStateToProps,
+  { deletePost }
+)(TitleList);
