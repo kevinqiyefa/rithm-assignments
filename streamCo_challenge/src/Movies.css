@@ -1,0 +1,9 @@
+.movies {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 2em 8em;
+}
+.content {
+  margin: 3em 0;
+}

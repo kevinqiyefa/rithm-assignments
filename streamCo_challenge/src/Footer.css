@@ -1,0 +1,42 @@
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: whitesmoke;
+  font-size: 0.8em;
+  background-color: rgb(20, 20, 20);
+}
+.footer-content {
+  padding: 0 7em;
+}
+
+.footer-list {
+  display: inline-block;
+  margin: 0 0.5em;
+}
+
+.footer-list:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.social {
+  width: 25px;
+  height: 25px;
+
+  margin: 3em 3em 3em 0;
+}
+.social:hover {
+  cursor: pointer;
+}
+
+.store {
+  margin: 0 0.5em;
+  cursor: pointer;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

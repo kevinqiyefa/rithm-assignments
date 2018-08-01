@@ -4,6 +4,37 @@ import './App.css';
 import Home from './Home';
 import New from './New';
 import Color from './Color';
+// import Login from './Login';
+
+// export const fakeAuth = {
+//   isAuthenticated: false,
+//   authenticate(cb) {
+//     this.isAuthenticated = true;
+//     setTimeout(cb, 100); // fake async
+//   },
+//   signout(cb) {
+//     this.isAuthenticated = false;
+//     setTimeout(cb, 100);
+//   }
+// };
+
+// const PrivateRoute = ({ component: Component, ...rest }) => (
+//   <Route
+//     {...rest}
+//     render={props =>
+//       fakeAuth.isAuthenticated ? (
+//         <Component {...props} />
+//       ) : (
+//         <Redirect
+//           to={{
+//             pathname: '/login',
+//             state: { from: props.location }
+//           }}
+//         />
+//       )
+//     }
+//   />
+// );
 
 class App extends Component {
   state = {
@@ -39,7 +70,19 @@ class App extends Component {
             path="/colors/new"
             component={props => <New {...props} addCl={this.addColor} />}
           />
+
+          {/* <PrivateRoute
+            path="/colors/new"
+            component={props => <New {...props} addCl={this.addColor} />}
+          /> */}
+
           {color_list}
+
+          {/* <Route
+            exact
+            path="/login"
+            component={props => <Login {...props} />}
+          /> */}
 
           <Redirect to="/colors" />
         </Switch>
