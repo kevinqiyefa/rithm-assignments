@@ -2,7 +2,8 @@
 JS Snake!
 =========
 
-[Click here to view the Demo](https://snake--kevinqi2.repl.co)
+`Click here to view the Demo 
+<https://snake--kevinqi2.repl.co>`
 
 
 
@@ -17,9 +18,6 @@ navigate!
 
 Step Zero: Play the Game
 ========================
-
-Open ``solution-single/index.html`` in a browser and play the game to get
-a feel for how it should work:
 
 - the up/down/left/right arrow keys to move the snake around
 
