@@ -2,8 +2,7 @@
 JS Snake!
 =========
 
-`Click here to view the Demo 
-<https://snake--kevinqi2.repl.co>`
+Click this link to view the Demo:  `https://snake--kevinqi2.repl.co`
 
 
 
